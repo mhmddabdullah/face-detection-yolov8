@@ -53,29 +53,3 @@ Suggested improvements: augmenting the training set with more small-face, side-a
 
 Python, Ultralytics YOLOv8, YOLOv5
 
-## Repository Structure
-
-```
-.
-├── notebook.ipynb            # Training and evaluation pipeline
-├── weights/
-│   ├── best.pt                # Best checkpoint (used for reported results)
-│   └── last.pt
-├── results/
-│   ├── results.csv             # Per-epoch training/validation metrics
-│   ├── results.png             # Training curves
-│   ├── confusion_matrix.png
-│   ├── PR_curve.png / P_curve.png / R_curve.png / F1_curve.png
-├── predictions/                 # Sample inference outputs on test images
-├── report.pdf / report.docx     # Full write-up: methodology, results, error analysis
-├── README.md
-└── requirements.txt
-```
-
-## Reproducing
-
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt` (`ultralytics`, etc.)
-3. Download the dataset from [Roboflow](https://universe.roboflow.com/billy-ukui4/face-fslja) and place it as configured in `data.yaml`
-4. Run `notebook.ipynb` to reproduce training and evaluation
-5. Use `weights/best.pt` to run inference on new images
